@@ -1,0 +1,9 @@
+.selector {
+    display: flex;
+    margin-bottom: 3%;
+    justify-content: space-between;
+}
+.selectors {
+    display: flex;
+    flex-direction: column;
+}

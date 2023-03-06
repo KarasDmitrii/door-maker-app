@@ -1,0 +1,49 @@
+.selectors {
+    height: 80%;
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+}
+.doors {
+    display: flex;
+    width: 50%;
+    height: 100%;
+    margin-left: 4%;
+    gap: 2%;
+}
+.header {
+    display: flex;
+    margin-left: 4%;
+    
+}
+.main {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    gap: 3%;
+}
+.text {
+    margin-bottom: 20%;
+    margin-top: 0%;
+}
+.button {
+    display: flex;
+    align-self: end;
+    width: 50%;
+    box-sizing: border-box;
+}
+.qr {
+    width: 20vh;
+    height: 20vh;
+    text-align: center;
+}
+.priceBox {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+}
+.price {
+    flex-direction: column;
+    display: flex;
+    width: -webkit-fill-available;
+}

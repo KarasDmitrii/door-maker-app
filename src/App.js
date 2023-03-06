@@ -1,24 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
 
+import './App.css';
+import { Constructor } from './components/constructor/Constructor';
+import { useState } from 'react';
+import { DoorContext } from './context/Context';
+import { ParamDataContext } from './context/Context';
 function App() {
+
+  const doorState = useState({
+    colorPrint: 'Красный',
+    colorSkin: 'Красный',
+    colorHandle: 'Красный',
+    height: '1800 мм',
+    width: '700 мм',
+    opened: 'Левое',
+    acces: []
+  })
+  const paramDataState = useState(null)
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ParamDataContext.Provider value={paramDataState}>
+      <DoorContext.Provider value={doorState}>
+        <div className="App">
+          <Constructor />
+        </div>
+      </DoorContext.Provider>
+    </ParamDataContext.Provider>
+
   );
 }
 
