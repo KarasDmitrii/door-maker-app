@@ -1,12 +1,12 @@
-
+import { url } from "../constructor/Constructor"
 export const sendOrder = (order) => {
-    fetch('http://door-maker/orders/', {
+    fetch(`${url}orders/`, {
         method: 'POST',
         headers: {
             "Content-Type": "application/x-www-form-urlencoded",
-            // "Origin": "http://localhost:3000"
+            
         },
-        // headers: { 'Content-Type':'application/x-www-form-urlencoded' },
+        
         body: JSON.stringify(order),
 
     }).then(res => console.log(res))
@@ -15,6 +15,3 @@ export const sendOrder = (order) => {
 
 }
 
-// .then(res => res.json())
-// headers: { 'Content-Type': 'multipart/form-data' }
-// .then(res => setParamDataState(res))

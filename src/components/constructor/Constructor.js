@@ -7,12 +7,13 @@ import { Button } from 'antd';
 import { Price } from "../price/Price";
 import { DoorContext, ParamDataContext } from "../../context/Context";
 import { sendOrder } from "../selectors/sendOrder";
+export const url = 'http://dkarasfr.beget.tech/'; 
 export const Constructor = () => {
     const [paramDataState, setParamDataState] = useContext(ParamDataContext)
     const [doorState] = useContext(DoorContext);
-
+    
     useEffect(() => {
-        fetch('http://door-maker/', {
+        fetch(url, {
             method: 'GET',
         }).then(res => res.json()).then(res => setParamDataState(res)).catch(err => console.log(err))
     }, []);
